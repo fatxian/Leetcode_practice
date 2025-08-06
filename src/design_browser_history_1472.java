@@ -1,18 +1,18 @@
-class ListNode {
+class ListNode1 {
     String val;
-    ListNode next;
-    ListNode prev;
+    ListNode1 next;
+    ListNode1 prev;
 
-    ListNode() {
+    ListNode1() {
     }
 
-    ListNode(String val) {
+    ListNode1(String val) {
         this.val = val;
         this.prev = null;
         this.next = null;
     }
 
-    ListNode(String val, ListNode prev, ListNode next) {
+    ListNode1(String val, ListNode1 prev, ListNode1 next) {
         this.val = val;
         this.prev = prev;
         this.next = next;
@@ -21,16 +21,16 @@ class ListNode {
 }
 
 public class design_browser_history_1472 {
-    private ListNode head;
-    private ListNode curr;
+    private ListNode1 head;
+    private ListNode1 curr;
 
-    public BrowserHistory(String homepage) {
-        head = new ListNode(homepage);
+    public design_browser_history_1472(String homepage) {
+        head = new ListNode1(homepage);
         curr = head;
     }
 
     public void visit(String url) {
-        curr = new ListNode(url, curr, null);
+        curr = new ListNode1(url, curr, null);
     }
 
     public String back(int steps) {
@@ -38,7 +38,7 @@ public class design_browser_history_1472 {
             if (curr.prev == null) {
                 return curr.val;
             }
-            ListNode temp = curr;
+            ListNode1 temp = curr;
             curr = curr.prev;
             curr.next = temp;
         }
@@ -50,7 +50,7 @@ public class design_browser_history_1472 {
             if (curr.next == null) {
                 return curr.val;
             }
-            ListNode temp = curr;
+            ListNode1 temp = curr;
             curr = curr.next;
             curr.prev = temp;
         }

@@ -1,11 +1,4 @@
-class ListNode {
-      int val;
-      ListNode next;
-      ListNode(int x) {
-          val = x;
-          next = null;
-      }
-  }
+
 
 public class linked_list_cycle_141 {
     public boolean hasCycle(ListNode head) {

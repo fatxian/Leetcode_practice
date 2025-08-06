@@ -18,7 +18,7 @@ public class design_linked_list_707 {
     private ListNode head;
     private int size;
 
-    public MyLinkedList() {
+    public design_linked_list_707 () {
         head = null;
         size = 0;
     }
